@@ -1,0 +1,17 @@
+name: Shell syntax
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  bash-syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Check Bash syntax
+        run: find . -name '*.sh' -print0 | xargs -0 -r -n1 bash -n

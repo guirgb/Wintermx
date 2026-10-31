@@ -1,0 +1,14 @@
+# arquivos locais e de desenvolvimento
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+.env
+.env.*
+!.env.example
+
+# caches Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
